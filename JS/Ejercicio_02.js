@@ -54,4 +54,4 @@ saldo_cuenta= saldo_cuenta - (cantidad*costo_producto);
 console.log(`El nuevo saldo es de: ${saldo_cuenta}`);
 //El cliente realiza un abono de 1500
 monto_trans=1500;
-console.log(`tu abono de: ${monto_trans} ha sido resivido, tu nuevo saldo es de ${(saldo_cuenta+monto_trans)}`)
+console.log(`Tu abono de: ${monto_trans} ha sido resivido, tu nuevo saldo es de ${(saldo_cuenta+monto_trans)}`)
