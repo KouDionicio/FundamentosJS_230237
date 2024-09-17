@@ -1,5 +1,5 @@
 //String o Cadenas de texto
-
+console.warn("----Tipo de dato String (Cadena de caractères)");
 const alumno = "Juan";
 let producto = 'Monitor';
 
@@ -25,6 +25,7 @@ let producto = 'Monitor';
 
 
 //Symbol
+console.warn("----Tipo de dato Symbol");
 // const primerSymbol = Symbol(30);
 // const segundoSymbol = Symbol(30);
 // console.log(primerSymbol === segundoSymbol);
@@ -33,5 +34,6 @@ let producto = 'Monitor';
 
 
 //Null
+console.warn("----Tipo de dato Null");
 const descuento = null;
 console.log(typeof descuento);
