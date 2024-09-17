@@ -81,8 +81,7 @@ console.log(`El primer experimento de numero grande es: ${numeroGrande}, que si 
 console.log(`El primer experimento de numero grande es: ${numeroGrande2}, que si es soportado por Number y su tipo de dato es: ${typeof(numeroGrande2)}`);
 console.log(`El primer experimento de numero grande es: ${numeroGrande3}, que si es soportado por Number y su tipo de dato es: ${typeof(numeroGrande3)}`);
 console.log(`El primer experimento de numero grande es: ${numeroGrande4}, que si es soportado por Number y su tipo de dato es: ${typeof(numeroGrande4)}`);
-// const numero = 30;
-// const numero2 = 20;
+
 
 // console.log(typeof numero);
 // console.log(typeof numero2);
