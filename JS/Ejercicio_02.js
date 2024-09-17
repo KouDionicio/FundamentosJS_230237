@@ -61,28 +61,46 @@ console.log(`Tu abono de: ${monto_trans} ha sido resivido, tu nuevo saldo es de 
 
 //String o Cadenas de texto
 console.warn("----Tipo de dato String (Cadena de caractères)");
-const alumno = "Juan";
-let producto = 'Monitor';
+const alumno = "Citlalli";
+let producto = "MONITOR\"";
 
-const numero = 30;
-const numero2 = 20;
 
-console.log(typeof numero);
-console.log(typeof numero2);
+console.log(`El nombre del alumno es: ${alumno}, que es un tipo de dato ${typeof(alumno)}`);
+console.log(`El nombre del producto es: ${producto}, que es un tipo de dato ${typeof(producto)}`);
+// Manipulando los Strings
+console.log(`Mas adelante podremos transformar el contenido de los STRINGS usando funciones especificas como convertir a mayusculas: ${alumno} => ${alumno.toUpperCase()}`);
+console.log(`O en su defecto a minusculas: ${producto}=> ${producto.toLowerCase()}`);
 
-const numeroGrande = BigInt(918298193891887139831091038173813);
-console.log(typeof numeroGrande)
+//BigInit
+console.warn("----Tipo de dato - BIGINIT (Numero Amplio)");
+const numeroGrande = 91829819389;
+const numeroGrande2 = 1234567;
+const numeroGrande3 = 9182981938912345676896677;
+const numeroGrande4 = 1234567890123456789012345678901234567890
+console.log(`El primer experimento de numero grande es: ${numeroGrande}, que si es soportado por Number y su tipo de dato es: ${typeof(numeroGrande)}`);
+console.log(`El primer experimento de numero grande es: ${numeroGrande2}, que si es soportado por Number y su tipo de dato es: ${typeof(numeroGrande2)}`);
+console.log(`El primer experimento de numero grande es: ${numeroGrande3}, que si es soportado por Number y su tipo de dato es: ${typeof(numeroGrande3)}`);
+console.log(`El primer experimento de numero grande es: ${numeroGrande4}, que si es soportado por Number y su tipo de dato es: ${typeof(numeroGrande4)}`);
+// const numero = 30;
+// const numero2 = 20;
+
+// console.log(typeof numero);
+// console.log(typeof numero2);
+
+// const numeroGrande = BigInt(918298193891887139831091038173813);
+// console.log(typeof numeroGrande)
  
- const numero1 = 10;
- const numero02 = 20;
-console.log(numero1 + Number(numeroGrande));
+//  const numero1 = 10;
+//  const numero02 = 20;
+// console.log(numero1 + Number(numeroGrande));
 
-//Para ocupar una operacion de una cadena de texto con un numero
-const numero4 = "30";
- const numero5 = 20;
+// Para ocupar una operacion de una cadena de texto con un numero
+// const numero4 = "30";
+//  const numero5 = 20;
 
-console.log(typeof String(numero4));
-console.log(typeof Number(numero5));
+// console.log(typeof String(numero4));
+// console.log(typeof Number(numero5));
+
 
 
 //Symbol
