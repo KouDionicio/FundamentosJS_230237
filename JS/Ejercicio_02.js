@@ -75,43 +75,139 @@ console.log(`O en su defecto a minusculas: ${producto}=> ${producto.toLowerCase(
 console.warn("----Tipo de dato - BIGINIT (Numero Amplio)");
 const numeroGrande = 91829819389;
 const numeroGrande2 = 1234567;
-const numeroGrande3 = 9182981938912345676896677;
-const numeroGrande4 = 1234567890123456789012345678901234567890
+let numeroGrande3 = 9182981938912345676896677;
+let numeroGrande4 = 1234567890123456789012345678901234567890;
 console.log(`El primer experimento de numero grande es: ${numeroGrande}, que si es soportado por Number y su tipo de dato es: ${typeof(numeroGrande)}`);
-console.log(`El primer experimento de numero grande es: ${numeroGrande2}, que si es soportado por Number y su tipo de dato es: ${typeof(numeroGrande2)}`);
-console.log(`El primer experimento de numero grande es: ${numeroGrande3}, que si es soportado por Number y su tipo de dato es: ${typeof(numeroGrande3)}`);
-console.log(`El primer experimento de numero grande es: ${numeroGrande4}, que si es soportado por Number y su tipo de dato es: ${typeof(numeroGrande4)}`);
+console.log(`El segundo experimento de numero grande es: ${numeroGrande2}, que si es soportado por Number y su tipo de dato es: ${typeof(numeroGrande2)}`);
+console.log(`El tercer experimento de numero grande es: ${numeroGrande3}, que ya no es soportado por Number y su tipo de dato es: ${typeof(numeroGrande3)}`);
+console.log(`El cuarto experimento de numero grande es: ${numeroGrande4}, que ya no es soportado por Number y su tipo de dato es: ${typeof(numeroGrande4)}`);
 
+// Para definir el tipo de dato BigInit debemos invocar la funcion BigInit o usar un la letra "n" al final del numero en la asignacion de valor
+console.log("Declaramos los valores númericos de gran tamaño...");
+numeroGrande3 =BigInt(9182981938912345676896677);
+numeroGrande4 = 1234567890123456789012345678901234567890n;
 
-// console.log(typeof numero);
-// console.log(typeof numero2);
+console.log(`El segundo experimento de un numero grande es ${numeroGrande3}, y su tipo de dato es: ${typeof(numeroGrande3)}`);
 
-// const numeroGrande = BigInt(918298193891887139831091038173813);
-// console.log(typeof numeroGrande)
- 
-//  const numero1 = 10;
-//  const numero02 = 20;
-// console.log(numero1 + Number(numeroGrande));
+console.log(`El segundo experimento de un numero grande es ${numeroGrande4}, y su tipo de dato es: ${typeof(numeroGrande4)}`);
+// Hay qu econsiderar que los tipos de datos declarados como BigInit no son operables con los de tipo number
+let numero = 238;
+// Si intentamos realizar una operacion matematica entre estos dos tipos de datos, obtendremos un error critico de operacion
 
-// Para ocupar una operacion de una cadena de texto con un numero
-// const numero4 = "30";
-//  const numero5 = 20;
-
-// console.log(typeof String(numero4));
-// console.log(typeof Number(numero5));
+console.log(`El resultado de la operacion de: numeroGrande4/ numero es = a : ${numeroGrande4/BigInt(numero)}`);
 
 
 
 //Symbol
-console.warn("----Tipo de dato Symbol");
-const primerSymbol = Symbol(30);
-const segundoSymbol = Symbol(30);
-console.log(primerSymbol === segundoSymbol);
- console.log(primerSymbol.valueOf());
+console.warn("----Tipo de dato - Symbol (Simbolo o Forzar la Unicidad)");
+ 
+const numero1 = 2;
+const numero2 = 2.0;
+const numero3 = "2";
+const numero4 = "2.0";
+const numero5 = Symbol(2);
+const numero6 = Symbol(2.0);
+const numero7 = Symbol("2");
+const numero8 = Symbol("2.0");
+const numero9 = Symbol("2");
+
+// Prueba de comparación 1: ¿ es 2 = 2.0 ?   No es necesario ocupar llaves   
+//=== sirve para compararr valor y tipo de dato, = es asignacion, == igualdad de valor
+console.log("Prueba de comparacion 1: ¿ es 2 = \"2.0 ?")
+if (numero1 === numero2)
+        console.log(`Se han comparado los valores de numero1 y numero2, confirmando que tienen el mismo valor.`)
+else 
+    console.log(`Se han comparado los valores de numero1 y 2, detectando que NO tienen el mismo valor.`)
+
+
+// Prueba de comparación 2: ¿ es 2 = "2" ?   No es necesario ocupar llaves
+console.log("Prueba de comparacion 2: ¿ es 2 = \" 2 ?")
+if (numero1 == numero3)
+    console.log(`Se han comparado los valores de numero1 y numero3, confirmando que tienen el mismo valor.`)
+else 
+console.log(`Se han comparado los valores de numero1 y numero3, detectando que NO tienen el mismo valor.`)
+
+
+// Prueba de comparación 3: ¿ es 2 = "2" ?   No es necesario ocupar llaves
+console.log("Prueba de comparacion 3: ¿ es 2 = \" 2 ?") 
+if (numero1 === numero3)
+    console.log(`Se han comparado los valores de numero1 y numero3, confirmando que tienen el mismo valor.`)
+else 
+console.log(`Se han comparado los valores de numero1 y numero3, detectando que NO tienen el mismo valor.`)
+
+
+// Prueba de comparación 4: ¿ es 2 = "2.0" ?   No es necesario ocupar llaves
+console.log("Prueba de comparacion 4: ¿ es 2 = \"2.0 ?") 
+if (numero1 === numero4)
+    console.log(`Se han comparado los valores de numero1 y numero4, confirmando que tienen el mismo valor.`)
+else 
+console.log(`Se han comparado los valores de numero1 y numero4, detectando que NO tienen el mismo valor.`)
+
+
+// Prueba de comparación 5: ¿ es 2 = "2.0" ?   No es necesario ocupar llaves
+console.log("Prueba de comparacion 5: ¿ es 2 = \"2.0 ?") 
+if (numero1 == numero4)
+    console.log(`Se han comparado los valores de numero1 y numero4, confirmando que tienen el mismo valor.`)
+else 
+console.log(`Se han comparado los valores de numero1 y numero4, detectando que NO tienen el mismo valor.`)
+
+
+// Prueba de comparación 6: ¿ es 2 = "2.0" ?   No es necesario ocupar llaves
+console.log("Prueba de comparacion 6:") 
+if (numero1 === numero5)
+    console.log(`Se han comparado los valores de numero1 y numero5, confirmando que tienen el mismo valor.`)
+else 
+console.log(`Se han comparado los valores de numero1 y numero5, detectando que NO tienen el mismo valor.`)
+
+
+// Prueba de comparación 7: ¿ es 2 = "2.0" ?   No es necesario ocupar llaves
+console.log("Prueba de comparacion 7:") 
+if (numero5 == numero7)
+    console.log(`Se han comparado los valores de numero5 y numero7, confirmando que tienen el mismo valor.`)
+else 
+console.log(`Se han comparado los valores de numero5 y numero7, detectando que NO tienen el mismo valor.`)
+
+
+// Prueba de comparación 8: ¿ es 2 = "2.0" ?   No es necesario ocupar llaves
+console.log("Prueba de comparacion 8:") 
+if (numero5 == numero9)
+    console.log(`Se han comparado los valores de numero5 y numero9, confirmando que tienen el mismo valor.`)
+else 
+console.log(`Se han comparado los valores de numero5 y numero9, detectando que NO tienen el mismo valor.`)
+
 
 
 
 //Null
-console.warn("----Tipo de dato Null");
-const descuento = null;
-console.log(typeof descuento);
+console.warn("----Tipo de dato Null (Nulo o Vacío)");
+// El tipo de dato nulo se asigna cuando el sistema o el usuario saben de la variable pero prefieren dejarlo vacío, bajo su consentimiento, a diferencia de UNDFIED que es un valor desconocido asignado por DEFAULT por JS
+
+let nombreUsuario = null;
+let passUsuario = null;
+let generoUsuario = null;
+let estatusRelacionSentimental = null;
+let ultimoPost;
+
+// Supongamos que estamos programando una Red Social, tipo facebook, en la que parte de la información se publicará en el perfil del usuario.
+
+// Si el usuario no ha iniciado sesión en el dispositivo móvil o en la aplicación web, puede explorar contenido de acceso público, y no existira información para mostrar.
+
+// En la HU (Historias de Usuario) que el usuario desea logearse debe ingresar su número telefonico o correo electrónico y una contraseña que deberemos guaradar en las variables previamente declaradas.
+
+// supongamos que el usuario: Citalli con correo 230237@utxicotepec.edu.mx desea ingresar con su contraseña: 1234
+
+nombreUsuario = "230237@utxicotepec.edu.mx";
+passUsuario = "1234";
+
+// en este momento de ejecución del sistema no sabemos se género ni su estatus de relación sentimental
+
+console.log(`El usuario: ${nombreUsuario} esta intentando logearse con una contraseña de: ${passUsuario}`);
+
+// Lo que prosigue es que el sistema contejara los datos ingresados con la base de datos y en caso de que los datos sean correctos comenzara la sesion en la plataforma actualizando estos valores.
+
+// Dadpo que Citlalli es del género Femenino y denota que su estatus de relación no ha sido capturado o lo mantiene privado esto generara la actualización de los valores de las variebles
+
+generoUsuario = "F";
+estatusRelacionSentimental = null;
+
+console.log(`El usuario: ${nombreUsuario}, se ha logeado exitosamente, al tener acceso a su información de perfil podemos deducir que es del género ${generoUsuario} y que su estatus de relación es: ${estatusRelacionSentimental} y su última publicación la realizó el: ${ultimoPost}`);
