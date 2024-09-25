@@ -159,4 +159,22 @@ console.log(`El objeto actualmente tiene los siguientes valores`);
 console.log(JSON.stringify(Producto2,null,2)); 
 
 // Convierte el objeto a una cadena para evitar problemas con las referencias
-console.log(`Por cuestiones de inflacion el costo del producto ha cambiado y debe ser actualizado... de $42.5, $42.0`)
+console.log(`Por cuestiones de inflacion el costo del producto ha cambiado y debe ser actualizado... de $42.5, $42.0`);
+// Para modificar el valor de un objeto basta con igualar el nuevo valor de la
+//propiedad deseada
+Producto2.Precio=6915.50;
+console.log(`Los nuevos valores del Producto son:`);
+console.log(Producto2);
+// ¿Puedo cambiar no solo el valor , sino el tipo de dato de un Objeto en Javascript?
+console.log(`------`);
+console.log(`El objeto actualmente tiene los siguientes valores`);
+let tipoDisponibilidad = typeof(Producto2.Disponibilidad);
+
+console.log(`El tipo de dato de la disponibilidad es: ${tipoDisponibilidad}`);
+console.log(JSON.stringify(Producto2, null, 2));
+Producto2.Disponibilidad-`Si`;
+// Disponiblidad Booleano
+let nuevoTipoDisponibilidad = typeof(Producto2.Disponibilidad)
+Console.log(Producto2);
+Console.log( `El nuevo tipo de dato de la disponibilidad es: ${nuevoTipoDisponibilidad}`);
+
