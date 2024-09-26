@@ -13,7 +13,7 @@ Previo a iniciar el desarrollo de software para web usando el framework de NodeJ
  |2.| Inicialización del Proyecto de Fundamentos de JS|5|Finalizada|
  |3.|Declaraciòn de Variables (Undefined/Boolean/Number)|10|Finalizada|
  |4.|Declaraciòn de Variables (String/BigInit/Null/Symbol/Function)|6| Finalizada|
- |5.|Introducciòn a Objetos|Por Definir| Activa|
+ |5.|Introducciòn a Objetos|19|Finalizada|
 
 ### Autor
 Citlalli Pérez Dionicio
