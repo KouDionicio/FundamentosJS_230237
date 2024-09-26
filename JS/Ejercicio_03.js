@@ -334,7 +334,7 @@ console.table(Venta2);
 
 
 // Verificar el estatus de mutabilidad de los objetos
-console.log("%c13.- Verificar el estatus de mutabilidad de los objetos ", style_console);
+console.log("%c13.- Mutabilidad POST Union de Objetos", style_console);
 
 console.log("Vamos a verificar el estatus de mutabilidad del objeto PEDIDO");
 console.log(`¿Esta el objeto de Pedido Congelado? : ${Object.isFrozen(Pedido)}`);
