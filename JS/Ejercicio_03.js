@@ -110,6 +110,7 @@ console.log(`Estatus: ${Productos.stock} unidades disponibles`);
 console.log("%c4.- Destructuracion de Objetos", style_console);
 
 let Producto2 = {
+    ID: 1234,
     Clave: 207,
     Nombre: "Toallas",
     Marca: "Saba",
@@ -123,7 +124,8 @@ let Producto2 = {
 }
 
 let Comprador= {
-    Clave: 230237,
+    ID: 9254,
+    //Clave: 230237,
     Nombre: "Citlalli",
     Apellidos: "Perez Dionicio",
     Tipo: "Regular",
@@ -133,6 +135,7 @@ let Comprador= {
 }
 
 let Pedido ={
+    ID: 5678,
     Producto_Clave: 236,
     Comprador_Clave: 1564,
     Cantidad: 3,
@@ -284,4 +287,70 @@ console.log("Los datos del cliente y sus hábitos de compra son: ")
 console.table(datosClientePromociones);
 
 //Operaciones sobre Objetos y Unión de Objetos
-console.log("%c11.- Operación sobre Objetos - Unión de Objetos", style_console);
+console.log("%c11.- Union de Objetos usando el metodo de asignacion (ASSING)", style_console);
+
+console.log("Imprimimos la estructura y valores del Objeto PRODUCTO");
+console.table(Producto2);
+
+console.log("Imprimimos la estructura y valores del Objeto PEDIDO");
+console.table(Pedido);
+// Suponiendo que el usuario ya realizo el pago del pedido se convertira en una VENTA que requiere informacion de ambos objetos
+
+let Producto3  ={ ...Producto2};
+const Venta = Object.assign(Producto3, Pedido); // Assing no solo permite la fusion de 2 o mas objeto,tambien muta a los objetos originales,perdiendo el valor original del ID.
+console.log("Imprimimos la estructura y valores del Objeto VENTA");
+console.table(Venta);
+
+
+
+// Union  de objetos usando SPREAD OPERATOR para evitar la perdida de informacion con objetos que comparten el mismo nombre en sus propiedades
+console.log("%c12.- Union de Objetos usando el SPREAD OPERATOR (...)", style_console);
+
+//Producto2.ID= 1286; //Parchado del error, reiniciando el valor del producto ID al original
+
+console.table(Producto2);
+console.table(Comprador);
+console.table(Pedido);
+
+
+let Venta2 = {
+    producto: {...Producto2},
+    comprador: {...Comprador},
+    pedido: {...Pedido}
+} 
+console.log("Fusionamos los 3 objetos en uno nuevo, sin perdida de informacion ");
+console.table(Venta2);
+
+
+// let spotifyUser = {
+//     Name: " ", //congelado
+//     nickname: " ", //sellado
+//     email: " ", //sellado
+//     password: " ", //sellado
+//     rol: " ", //sellado
+//     since: " ", //congelado
+//     playList: ["BTS", "Spring Day"], // normal, modificado o eliminado
+// }
+
+
+// Verificar el estatus de mutabilidad de los objetos
+console.log("%c13.- Verificar el estatus de mutabilidad de los objetos ", style_console);
+
+console.log("Vamos a verificar el estatus de mutabilidad del objeto PEDIDO");
+console.log(`¿Esta el objeto de Pedido Congelado? : ${Object.isFrozen(Pedido)}`);
+console.log(`¿Esta el objeto de Pedido Sellado? : ${Object.isSealed(Pedido)}`);
+
+console.log("Vamos a verificar el estatus de mutabilidad del objeto COMPRADOR");
+console.log(`¿Esta el objeto de Pedido Congelado? : ${Object.isFrozen(Comprador)}`);
+console.log(`¿Esta el objeto de Pedido Sellado? : ${Object.isSealed(Comprador)}`);
+
+
+console.log("Vamos a verificar el estatus de mutabilidad del objeto PRODUCTO");
+console.log(`¿Esta el objeto de Pedido Congelado? : ${Object.isFrozen(Producto2)}`);
+console.log(`¿Esta el objeto de Pedido Sellado? : ${Object.isSealed(Producto2)}`);
+
+//Modificacion de la estructura de producto, agregando una nueva propiedad 
+//Producto delegado ya no se hacen, o ya no tienen continuidad
+Producto2['isLegacy'] = true; 
+console.log(Producto2);
+console.log(Venta2);
