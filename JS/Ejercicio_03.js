@@ -107,7 +107,7 @@ console.log(`Estatus: ${Productos.stock} unidades disponibles`);
 
 
 // Destructuracion de Objetos
-console.log("%c4.- Destructuracion de Objetos", style_console);
+console.log("%c.- Destructuracion de Objetos", style_console);
 
 let Producto2 = {
     ID: 1234,
@@ -156,7 +156,7 @@ if (Costo_Compra<Cliente_SaldoActual)
  
 // Actualizar valores de las propiedades de un objeto
 
-console.log("%c5.- Actualizacion de los valores de las propiedades de un Objeto", style_console);
+console.log("%c4.- Actualizacion de los valores de las propiedades de un Objeto", style_console);
 
 console.log(`El objeto actualmente tiene los siguientes valores`);
 console.log(JSON.stringify(Producto2,null,2)); 
@@ -183,7 +183,7 @@ let nuevoTipoDisponibilidad = typeof(Producto2.Disponibilidad);
 //Console.log(`El nuevo tipo de dato de la disponibilidad es: ${nuevoTipoDisponibilidad}`);
 
 //Agregar nuevas propiedades a un objeto existente
-console.log("%c6.- Agregación de la Propiedad de un Objeto (MUTACIÓN)", style_console);
+console.log("%c5.- Agregación de la Propiedad de un Objeto (MUTACIÓN)", style_console);
 console.log("Objeto antes de ser modificado");
 console.table(JSON.stringify(Comprador));  
 
@@ -197,7 +197,7 @@ console.table(Comprador);
 
 
 //Eliminar nuevas propiedades a un objeto existente
-console.log("%c7.- Eliminación de la Propiedad de un Objeto (MUTACIÓN)", style_console);
+console.log("%c6.- Eliminación de la Propiedad de un Objeto (MUTACIÓN)", style_console);
 console.log("Objeto antes de ser modificado");
 console.table(Pedido);
 
@@ -208,7 +208,7 @@ console.table(Pedido)
 
 
 //Métodos para controlar la Mutabilidad de los Objetos, Congelación (FREEZE)
-console.log("%c8.- Métodos para controlar la Mutabilidad de los Objetos, Congelación (FREEZE)", style_console);
+console.log("%c7.- Métodos para controlar la Mutabilidad de los Objetos, Congelación (FREEZE)", style_console);
 
 // Si deseamos no perimitir que los objetos sean modificados ni en estructura, ni en valor, utilizaremos el método FREEZE
 
@@ -224,7 +224,7 @@ console.table(Comprador);
 
 
 //Métodos para controlar la Mutabilidad de los Objetos, Sellado (SEAL)
-console.log("%c9.- Métodos para controlar la Mutabilidad de los Objetos, Sellado (SEAL)", style_console);
+console.log("%c8.- Métodos para controlar la Mutabilidad de los Objetos, Sellado (SEAL)", style_console);
 
 // Sin embargo, en el caso que deseamos poder modificar los valores de las propiedades del objeto, pero no su estructura, usaremos SEAL
 console.log("Objeto antes de ser modificado:");
@@ -243,7 +243,7 @@ console.log(`Verificamos si se realizaron los cambios en el Objeto Pedido`);
 console.table(Pedido);
 
 // Desestructuración de 2 o más Objetos
-console.log("%c10.- Desestructuración de 2 o más Objetos", style_console);
+console.log("%c9.- Desestructuración de 2 o más Objetos", style_console);
 
 let {Precio: productoPrecio, Marca: productoMarca} = Producto2;
 let {Correo: clienteCorreo, PaisOrigen: clientePais, SaldoActual: clienteSaldo ,Tipo: clienteTipo} = Comprador;
@@ -287,7 +287,7 @@ console.log("Los datos del cliente y sus hábitos de compra son: ")
 console.table(datosClientePromociones);
 
 //Operaciones sobre Objetos y Unión de Objetos
-console.log("%c11.- Union de Objetos usando el metodo de asignacion (ASSING)", style_console);
+console.log("%c10.- Union de Objetos usando el metodo de asignacion (ASSING)", style_console);
 
 console.log("Imprimimos la estructura y valores del Objeto PRODUCTO");
 console.table(Producto2);
@@ -304,7 +304,7 @@ console.table(Venta);
 
 
 // Union  de objetos usando SPREAD OPERATOR para evitar la perdida de informacion con objetos que comparten el mismo nombre en sus propiedades
-console.log("%c12.- Union de Objetos usando el SPREAD OPERATOR (...)", style_console);
+console.log("%c11.- Union de Objetos usando el SPREAD OPERATOR (...)", style_console);
 
 //Producto2.ID= 1286; //Parchado del error, reiniciando el valor del producto ID al original
 
@@ -334,7 +334,7 @@ console.table(Venta2);
 
 
 // Verificar el estatus de mutabilidad de los objetos
-console.log("%c13.- Mutabilidad POST Union de Objetos", style_console);
+console.log("%c12.- Mutabilidad POST Union de Objetos", style_console);
 
 console.log("Vamos a verificar el estatus de mutabilidad del objeto PEDIDO");
 console.log(`¿Esta el objeto de Pedido Congelado? : ${Object.isFrozen(Pedido)}`);
