@@ -111,15 +111,15 @@ console.log("El arregloMixto actualmente tiene los siguientes elementos: ");
 console.table(arregloMixto);
 console.log("Agregamos la palabra: \"Hola\", como nuevo elemento");
 arregloMixto.push("Hola");
-console.log("Y también agregamos el numero -321415.23564, siendo este un BigInt");
-arregloMixto.push(BigInt(-321415.23564))
+console.log("Y también agregamos el numero -321412763895.235627892784, siendo este un BigInt");
+//arregloMixto.push(BigInt(321412763895.235627892784))
 console.log("Después de esta dos operaciones el arreglo queda con los siguientes elementos: ");
 console.table(arregloMixto);
 
 console.log("%c6.- Agregar un nuevo elemento a un arreglo (UNSHIFT) en la posición inicial",style_console);
 console.table(estudiantes);
 console.log("Ahora agregamos a Jenny, al comienzo del arreglo.");
-arregloMixto.unshift("Jenny");
+estudiantes.unshift("Jenny");
 console.log("La lista atual es:");
 console.table(estudiantes);
 
@@ -127,16 +127,16 @@ console.table(estudiantes);
 console.log("%c7.- Eliminar el elemento de un arreglo en la última posición (POP)",style_console);
 console.log("El arreglo tiene los siguientes elementos: ");
 console.table(estudiantes);
-console.log("Para este caso eliminaremos a Obed Gúzman, en la última posición. ");
+console.log("Para este caso eliminaremos a Citlalli, en la última posición. ");
 console.log("Después de eliminar el elemento el arreglo quedo de la siguiente manera:");
-arregloMixto.pop();
+estudiantes.pop();
 console.table(estudiantes);
 
 
 console.log("%c8.- Eliminar el elemento de un arreglo en la primera posición (SHIFT)",style_console);
 console.log("El arreglo tiene los siguientes elementos:");
 console.table(estudiantes);
-console.log("Para este caso eliminaremos a Raúl Pasos, en la primera posición.");
+console.log("Para este caso eliminaremos a Jenny, en la primera posición.");
 estudiantes.shift();
 console.log("Después de eliminar el elemento del arreglo quedo de la siguiente manera: ");
 console.table(estudiantes);
@@ -145,3 +145,93 @@ console.table(estudiantes);
 console.log("%c9.- Modificar un arreglo en un arreglo nuevo con posiciones definidas (SPLICE)", style_console);
 console.log("El arreglo original tiene los elementos:");
 console.table(estudiantes);
+console.log("Dividir el arreglo en uno nuevo eliminando ciertos elemento");
+estudiantes.splice(2);
+console.table(estudiantes);
+
+estudiantes.push("Brisa");
+estudiantes.push("Carlos");
+estudiantes.push("Jesus");
+estudiantes.push("Daniel");
+estudiantes.push("Erick");
+console.log("Se han agregado 5 nuevos estudiantes, por lo que el arreglo es: " );
+
+console.table(estudiantes);
+
+console.log("Ahora ya tenemos los elementos suficientes para aplicar el elemento el metodod splice con dos parametros que seran 3,5");
+estudiantes.splice(3,5);
+console.log("Resultado en: ");
+console.table(estudiantes);
+
+console.log("Ahora vamos a insertar a \"Sailor \ en los elementos de la posicion 0 y 1");
+estudiantes.splice(1,0,"Sailor");
+console.log("Resultado en: ");
+console.table(estudiantes);
+
+
+console.log("%c10.- Metodos para la manipulacion de Arreglos INMUTABLES", style_console);
+let signosZodiacales=["Aries","Tauro","Geminis","Cancer","Leo","Virgo","Libra","Escorpio","Sagitario","Capricornio","Acuario","Piscis"];
+
+//congelamos el arreglo volviendolo INMUTABLE
+Object.freeze(signosZodiacales);
+
+// ninguna se ejecuta porque nuestro objeto es inmutable -estudiar-
+//signosZodiacales.push("Ofiuco");
+//signosZodiacales.unshift();
+//signosZodiacales.splice(6,2);
+
+let [signo1,,signo3,,,,signo7,,,,,]=signosZodiacales;
+console.log(`El Primer signo Zodiacal es: ${signo1}`);
+console.log(`El Segungo signo Zodiacal es: ${signo3}`);
+signo7="Negro";
+console.log(`El Tercer signo Zodiacal es: ${signo7}`);
+
+console.log("%c11.- Filtrado dentro de un arreglo utilizando el Metodo FILTER", style_console);
+estudiantes.push("Carlos");
+estudiantes.push("Jesus");
+estudiantes.push("Daniel");
+estudiantes.push("Erick");
+console.table(estudiantes);
+Object.freeze(estudiantes);
+
+
+console.log("Filtrando los primeros 5 elementos");
+let nuevoEstudiantes = estudiantes.filter((estudiante,index) => index<5);
+console.table(nuevoEstudiantes);
+console.table(filtraPrimeros5(estudiantes));
+
+let nuevoEstudiantesNombre = estudiantes.filter((estudiante) => estudiante.length>15);
+console.table(nuevoEstudiantesNombre);
+
+// intentamos modificar el arreglo inmutable   *estudiantes.pop();  console.table(estudiantes);
+
+//intentamos modificar el nuevo arreglo que no ha sido congelado
+nuevoEstudiantes.unshift("Dulce");
+console.table(nuevoEstudiantes);
+
+function filtraPrimeros5(arregloEstudiantes){
+    let listaFiltrada = []
+    for(let i=0; i<5;i++){
+        listaFiltrada.push(arregloEstudiantes[i]);
+    }
+    return listaFiltrada;
+}
+
+
+// Filtrado de Datos - Transformando los datos
+console.log("%c12.- Filtrado de Elementos dentro de un arreglo utilizando el Metodo MAP, en el que necesitamos transformarlo", style_console);
+console.log("Imprimimos los elementos actuales de signosZodiacales: ");
+console.table(signosZodiacales);
+
+// que podemos hacer si necesitamos el mismo arreglo pero ahora con tdos sus elemenetos con letras MAYUSCULAS
+console.table(signosZodiacales.map(signoZodiacal => signoZodiacal.toUpperCase()));
+
+
+//reduccion de elementos de un arreglo, se usa cuando debemos hacer operaciones matematicas o cuantitativas a un arreglo, como obtener totales, la idea es reducir la  lista a un valor mas simplificado
+//const costosListasCompras: number[]
+const costosListasCompras = [15,21.89,100,45.2,94.10];
+
+// como podemos calcular el total de una lista de costos de un carrito de compras
+console.log("Los precios son: ");
+console.table(costosListasCompras);
+console.log(`El total de la compra es: ${costosListasCompras.reduce((total,precio)=>total+precio,0).toFixed(2)}`)
