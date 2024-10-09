@@ -226,7 +226,7 @@ console.table(signosZodiacales);
 // que podemos hacer si necesitamos el mismo arreglo pero ahora con tdos sus elemenetos con letras MAYUSCULAS
 console.table(signosZodiacales.map(signoZodiacal => signoZodiacal.toUpperCase()));
 
-
+console.log("%c13.- Metodo Reduce ", style_console);
 //reduccion de elementos de un arreglo, se usa cuando debemos hacer operaciones matematicas o cuantitativas a un arreglo, como obtener totales, la idea es reducir la  lista a un valor mas simplificado
 //const costosListasCompras: number[]
 const costosListasCompras = [15,21.89,100,45.2,94.10];
@@ -235,3 +235,6 @@ const costosListasCompras = [15,21.89,100,45.2,94.10];
 console.log("Los precios son: ");
 console.table(costosListasCompras);
 console.log(`El total de la compra es: ${costosListasCompras.reduce((total,precio)=>total+precio,0).toFixed(2)}`)
+
+
+
