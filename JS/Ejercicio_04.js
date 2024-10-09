@@ -75,8 +75,8 @@ console.log(`Elemento en la posicion [1][2]: ${matriz[1][2]}`);
 // Accediendo a los valores de una matriz irregular
 console.log("Leyendo las Propiedades de una Matriz Irregular");
 console.log(`Elemento en la posicion [0][0]: ${matrizIrregular[0][0]}`);
-console.log(`Elemento en la posicion [2][0] (Promedio de Juan): ${matrizIrregular[2][0]}`);
-console.log(`Elemento en la posicion [1][2] (¿Es María mayor de edad?): ${matrizIrregular[1]
+console.log(`Elemento en la posicion [2][0] (Promedio de Luz): ${matrizIrregular[2][0]}`);
+console.log(`Elemento en la posicion [1][2] (¿Es Kou mayor de edad?): ${matrizIrregular[1]
 [2]}`);
 
 // Funciones y Métodos de Arreglos
@@ -96,7 +96,7 @@ for (let i = 0;i<numeroFilas; i++)
 console.log(`La longitud de la fila ${[i]} es = ${matrizIrregular[i].length}`);
 
 
-console.log("$c5.- Agregar un nuevo elemento a un arreglo (PUSH)",style_console);
+console.log("%c5.- Agregar un nuevo elemento a un arreglo (PUSH)",style_console);
 
 let estudiantes = ["Matías", "Yazmin", "Derek", "Obed","Diego","Kou"];
 console.log("Los elementos actuales del arreglo son: ");
