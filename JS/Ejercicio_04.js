@@ -75,8 +75,8 @@ console.log(`Elemento en la posicion [1][2]: ${matriz[1][2]}`);
 // Accediendo a los valores de una matriz irregular
 console.log("Leyendo las Propiedades de una Matriz Irregular");
 console.log(`Elemento en la posicion [0][0]: ${matrizIrregular[0][0]}`);
-console.log(`Elemento en la posicion [2][0] (Promedio de Juan): ${matrizIrregular[2][0]}`);
-console.log(`Elemento en la posicion [1][2] (¿Es María mayor de edad?): ${matrizIrregular[1]
+console.log(`Elemento en la posicion [2][0] (Promedio de Luz): ${matrizIrregular[2][0]}`);
+console.log(`Elemento en la posicion [1][2] (¿Es Kou mayor de edad?): ${matrizIrregular[1]
 [2]}`);
 
 // Funciones y Métodos de Arreglos
@@ -96,7 +96,7 @@ for (let i = 0;i<numeroFilas; i++)
 console.log(`La longitud de la fila ${[i]} es = ${matrizIrregular[i].length}`);
 
 
-console.log("$c5.- Agregar un nuevo elemento a un arreglo (PUSH)",style_console);
+console.log("%c5.- Agregar un nuevo elemento a un arreglo (PUSH)",style_console);
 
 let estudiantes = ["Matías", "Yazmin", "Derek", "Obed","Diego","Kou"];
 console.log("Los elementos actuales del arreglo son: ");
@@ -226,7 +226,7 @@ console.table(signosZodiacales);
 // que podemos hacer si necesitamos el mismo arreglo pero ahora con tdos sus elemenetos con letras MAYUSCULAS
 console.table(signosZodiacales.map(signoZodiacal => signoZodiacal.toUpperCase()));
 
-
+console.log("%c13.- Metodo Reduce ", style_console);
 //reduccion de elementos de un arreglo, se usa cuando debemos hacer operaciones matematicas o cuantitativas a un arreglo, como obtener totales, la idea es reducir la  lista a un valor mas simplificado
 //const costosListasCompras: number[]
 const costosListasCompras = [15,21.89,100,45.2,94.10];
@@ -235,3 +235,6 @@ const costosListasCompras = [15,21.89,100,45.2,94.10];
 console.log("Los precios son: ");
 console.table(costosListasCompras);
 console.log(`El total de la compra es: ${costosListasCompras.reduce((total,precio)=>total+precio,0).toFixed(2)}`)
+
+
+

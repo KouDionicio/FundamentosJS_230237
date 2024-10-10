@@ -11,9 +11,11 @@ Previo a iniciar el desarrollo de software para web usando el framework de NodeJ
  |--|--|--|--|
  |1.| Metodología de Evaluación|1|Finalizada|
  |2.| Inicialización del Proyecto de Fundamentos de JS|5|Finalizada|
- |3.|Declaraciòn de Variables (Undefined/Boolean/Number)|10|Finalizada|
- |4.|Declaraciòn de Variables (String/BigInit/Null/Symbol/Function)|6| Finalizada|
- |5.|Introducciòn a Objetos|19|Finalizada|
+ |3.|Declaración de Variables (Undefined/Boolean/Number)|10|Finalizada|
+ |4.|Declaración de Variables (String/BigInit/Null/Symbol/Function)|6| Finalizada|
+ |5.|Introducción a Objetos|19|Finalizada|
+ |6.|Repaso de Arreglos|18|Finalizada|
+ |.|Sentencias de Control y Ciclos|16|Activa|
 
 ### Autor
 Citlalli Pérez Dionicio
